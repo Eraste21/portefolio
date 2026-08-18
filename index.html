@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio d'Eraste Konan — Développeur Web fullstack en formation à Lille.">
+  <title>Eraste Konan — Développeur Web</title>
+
+  <!-- Google Fonts : Outfit (titres), Karla (corps), JetBrains Mono (technique) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Devicon : logos officiels des technologies -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+  <!-- AOS : animations au scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+  <!-- Feuilles de style du portfolio -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <link rel="icon" type="image/png" href="assets/profile.png">
+</head>
+<body>
+
+  <!-- Navigation fixe avec ancres vers chaque section -->
+  <header class="header" id="header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a href="#hero" class="nav__logo" aria-label="Retour en haut">
+        <img
+          src="assets/profile.png"
+          alt="Eraste Konan"
+          class="nav__logo-img"
+          width="36"
+          height="36"
+        >
+      </a>
+
+      <button class="nav__burger" id="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu">
+        <li><a href="#about" class="nav__link">À propos</a></li>
+        <li><a href="#skills" class="nav__link">Compétences</a></li>
+        <li><a href="#experience" class="nav__link">Expérience</a></li>
+        <li><a href="#project" class="nav__link">Projet</a></li>
+        <li><a href="#education" class="nav__link">Formation</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Section Hero : présentation et accroche visuelle -->
+    <section id="hero" class="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__container container">
+        <div class="hero__content" data-aos="fade-up">
+          <p class="hero__greeting"><span class="mono">&lt;/&gt;</span> Bonjour, je suis</p>
+          <h1 class="hero__name">Eraste Konan</h1>
+          <h2 class="hero__title">Développeur Web</h2>
+          <p class="hero__subtitle mono">React · TypeScript · NestJS · MySQL · Docker</p>
+          <p class="hero__desc">Fullstack, en formation — Lille, France</p>
+          <div class="hero__actions">
+            <a href="#project" class="btn btn--primary">Voir mes projets</a>
+            <a href="#contact" class="btn btn--secondary">Me contacter</a>
+            <a href="https://github.com/Eraste21" class="btn btn--ghost" target="_blank" rel="noopener noreferrer" aria-label="Profil GitHub">
+              <i class="devicon-github-original"></i> GitHub
+            </a>
+          </div>
+        </div>
+        <div class="hero__visual" data-aos="fade-left" data-aos-delay="200">
+          <div class="hero__image-wrapper">
+            <img
+              src="assets/profile.png"
+              alt="Eraste Konan, développeur web, travaillant sur son ordinateur dans un environnement sombre"
+              class="hero__image"
+              width="480"
+              height="480"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section À propos : profil, savoir-être et langues -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">À propos</h2>
+        <div class="about__grid">
+          <div class="about__text" data-aos="fade-up" data-aos-delay="100">
+            <p>
+              Étudiant en 3<sup>e</sup> année à l'ESGI Lille, je m'oriente vers le développement web fullstack.
+              Curieux, autonome et motivé, j'aime concevoir des solutions utiles, structurées et adaptées à des besoins concrets.
+              Mon expérience actuelle chez Planète Aroma me permet de travailler sur un projet complet,
+              depuis l'analyse du besoin jusqu'à la conception de l'application.
+            </p>
+          </div>
+          <div class="about__details" data-aos="fade-up" data-aos-delay="200">
+            <div class="about__block">
+              <h3 class="about__label">Savoir-être</h3>
+              <ul class="tag-list" id="soft-skills-list"></ul>
+            </div>
+            <div class="about__block">
+              <h3 class="about__label">Langues</h3>
+              <ul class="tag-list" id="languages-list"></ul>
+            </div>
+            <div class="about__block">
+              <h3 class="about__label">Centres d'intérêt</h3>
+              <ul class="tag-list tag-list--subtle" id="interests-list"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Compétences : grille d'icônes Devicon par catégorie -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Compétences</h2>
+        <p class="section__subtitle" data-aos="fade-up" data-aos-delay="50">
+          Technologies et outils que j'utilise au quotidien
+        </p>
+        <div id="skills-categories"></div>
+      </div>
+    </section>
+
+    <!-- Section Expérience : timeline alimentée par render.js -->
+    <section id="experience" class="section experience">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Expérience professionnelle</h2>
+        <div class="timeline" id="experience-list"></div>
+      </div>
+    </section>
+
+    <!-- Section Projet : carte du projet en cours -->
+    <section id="project" class="section project">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Projet en cours</h2>
+        <div id="project-card"></div>
+      </div>
+    </section>
+
+    <!-- Section Formation : parcours scolaire chronologique -->
+    <section id="education" class="section education">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Formation</h2>
+        <div class="timeline" id="education-list"></div>
+      </div>
+    </section>
+
+    <!-- Section Contact : coordonnées et liens sociaux -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Contact</h2>
+        <p class="section__subtitle" data-aos="fade-up" data-aos-delay="50">
+          Disponible pour une alternance, un stage ou une mission freelance.
+        </p>
+        <div class="contact__grid" id="contact-info"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="footer-year"></span> Eraste Konan — Développeur Web</p>
+      <p class="footer__mono mono">BUILD · SOLVE · REPEAT</p>
+    </div>
+  </footer>
+
+  <!-- Scripts : AOS puis modules ES du portfolio -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

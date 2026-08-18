@@ -1,0 +1,52 @@
+/**
+ * animations.css
+ * Keyframes et classes d'animation pour les effets glow et micro-interactions.
+ */
+
+/* Glow teal pulsé — utilisé sur les éléments interactifs au survol */
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(20, 224, 180, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(20, 224, 180, 0.35);
+  }
+}
+
+/* Animation d'entrée du menu burger */
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Classe utilitaire pour le glow au survol des cartes compétences */
+.skill-card:hover {
+  animation: glow-pulse 1.5s ease-in-out infinite;
+}
+
+/* Transition douce pour les liens de navigation actifs */
+.nav__link {
+  position: relative;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: width var(--transition-base);
+}
+
+.nav__link.active::after,
+.nav__link:hover::after {
+  width: 100%;
+}

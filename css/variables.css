@@ -1,0 +1,56 @@
+/**
+ * variables.css
+ * Custom properties globales : couleurs, typographie (Outfit / Karla / JetBrains Mono),
+ * espacements et transitions.
+ * Modifier ces valeurs pour ajuster l'identité visuelle du portfolio.
+ */
+
+:root {
+  /* --- Palette noir / blanc / teal --- */
+  --color-bg: #0A0A0B;
+  --color-bg-secondary: #141517;
+  --color-text: #F5F5F5;
+  --color-text-secondary: #A0A3A8;
+  --color-accent: #14E0B4;
+  --color-accent-hover: #0FBF9A;
+  --color-border: #25272B;
+
+  /* --- Typographie --- */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Karla', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* --- Tailles de police --- */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.5rem;
+
+  /* --- Espacements --- */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 5rem;
+  --space-section: 6rem;
+
+  /* --- Layout --- */
+  --container-max: 1140px;
+  --header-height: 4rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+
+  /* --- Effets --- */
+  --shadow-glow: 0 0 20px rgba(20, 224, 180, 0.25);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+}

@@ -131,7 +131,7 @@ export const stackIcons = {
 export const contact = {
   phone: "+33 7 44 96 83 03",
   email: "e.konan@myskolae.fr",
-  location: "Lille, France",
+  location: "Villeneuve-d'Ascq, France",
   github: "github.com/Eraste21",
   githubUrl: "https://github.com/Eraste21",
 };

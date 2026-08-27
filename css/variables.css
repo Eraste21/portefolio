@@ -1,6 +1,6 @@
 /**
  * variables.css
- * Custom properties globales : couleurs, typographie (Outfit / Karla / JetBrains Mono),
+ * Custom properties globales : couleurs, typographie et espacements.
  * espacements et transitions.
  * Modifier ces valeurs pour ajuster l'identité visuelle du portfolio.
  */
@@ -16,8 +16,8 @@
   --color-border: #25272B;
 
   /* --- Typographie --- */
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Karla', sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   /* --- Tailles de police --- */
@@ -42,11 +42,11 @@
   --space-section: 6rem;
 
   /* --- Layout --- */
-  --container-max: 1140px;
-  --header-height: 4rem;
-  --radius-sm: 0.375rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1rem;
+  --container-max: 1180px;
+  --header-height: 4.5rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
 
   /* --- Effets --- */
   --shadow-glow: 0 0 20px rgba(20, 224, 180, 0.25);

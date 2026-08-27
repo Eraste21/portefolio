@@ -97,7 +97,7 @@ export const experience = [
     company: "Planète Aroma",
     contract: "Contrat d'apprentissage",
     period: "23 février 2026 – 23 août 2026",
-    location: "Lille",
+    location: "Valenciennes",
     missions: [
       "Conception d'une application web fullstack de gestion de stock adaptée aux besoins de l'entreprise.",
       "Gestion du projet en autonomie : analyse du besoin, choix techniques, organisation des données et suivi des livrables.",

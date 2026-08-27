@@ -212,4 +212,45 @@ Puis ouvrir `http://localhost:8080` (ou le port affiché).
 
 ---
 
+## 11. Mise à jour du portfolio — 27 août 2026
+
+### Contenu
+
+- Localisation mise à jour vers **Villeneuve-d'Ascq, France** dans le Hero et la section Contact.
+- Lieu de l'expérience chez Planète Aroma corrigé en **Valenciennes**.
+- Section renommée **Mes projets** et affichée verticalement.
+- Ajout des projets **Listener**, **Blobby** et **Morpion**, avec leur stack et leur dépôt GitHub.
+- Le projet de gestion de stock est signalé **En cours** et présenté comme réalisé dans le cadre du stage.
+- La description de Morpion précise son objectif d'apprentissage de la programmation orientée objet.
+
+### Refonte visuelle
+
+- Palette noir / blanc / turquoise conservée sans modification.
+- Titres passés à **Space Grotesk** et textes à **Inter** ; JetBrains Mono reste utilisé pour les éléments techniques.
+- Hiérarchie des titres renforcée, Hero plus expressif et navigation légèrement agrandie.
+- Ajout d'une grille discrète dans le fond du Hero, sans nouvelle couleur.
+- Cartes de projets numérotées, avec davantage de relief et une meilleure adaptation mobile.
+- Survol des compétences simplifié avec un déplacement vertical.
+
+### Fichiers principaux
+
+- `index.html` : chargement des nouvelles polices.
+- `css/variables.css` : familles typographiques, largeur du conteneur et rayons.
+- `css/base.css` : titres de section et boutons.
+- `css/sections.css` : Hero, navigation, compétences et cartes de projets.
+- `js/data.js` : localisation et contenu des projets.
+- `js/render.js` : rendu d'une liste de projets et liens GitHub.
+
+### Vérifications effectuées
+
+- `node --check js/data.js` : réussi.
+- `node --check js/render.js` : réussi.
+- `git diff --check` : aucune erreur d'espacement ; avertissements de conversion LF/CRLF uniquement.
+
+### Limite restante
+
+- La validation visuelle automatique n'a pas pu être effectuée : aucun navigateur n'était connecté à la session. Le rendu reste à confirmer manuellement sur ordinateur et mobile.
+
+---
+
 *Généré le 19 août 2026 — Portfolio Eraste Konan*

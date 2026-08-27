@@ -12,7 +12,7 @@
   width: 100%;
   height: var(--header-height);
   background: rgba(10, 10, 11, 0.92);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--color-border);
   z-index: 1000;
   transition: box-shadow var(--transition-base);
@@ -37,8 +37,8 @@
 }
 
 .nav__logo-img {
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--color-border);
@@ -126,8 +126,12 @@
   position: absolute;
   inset: 0;
   background:
+    linear-gradient(rgba(160, 163, 168, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(160, 163, 168, 0.035) 1px, transparent 1px),
     radial-gradient(ellipse at 70% 50%, rgba(20, 224, 180, 0.06) 0%, transparent 60%),
     radial-gradient(ellipse at 20% 80%, rgba(20, 224, 180, 0.04) 0%, transparent 50%);
+  background-size: 48px 48px, 48px 48px, auto, auto;
+  mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
   pointer-events: none;
 }
 
@@ -141,9 +145,16 @@
 }
 
 .hero__greeting {
-  font-size: var(--text-lg);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.4rem 0.75rem;
+  font-size: var(--text-sm);
   color: var(--color-text-secondary);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  background: rgba(20, 224, 180, 0.06);
+  border: 1px solid rgba(20, 224, 180, 0.18);
+  border-radius: 999px;
 }
 
 .hero__greeting .mono {
@@ -152,15 +163,16 @@
 
 .hero__name {
   font-family: var(--font-heading);
-  font-size: var(--text-5xl);
+  font-size: clamp(3.25rem, 7vw, 6rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 0.95;
+  letter-spacing: -0.065em;
   margin-bottom: var(--space-xs);
 }
 
 .hero__title {
   font-family: var(--font-heading);
-  font-size: var(--text-2xl);
+  font-size: clamp(1.5rem, 3vw, 2.35rem);
   font-weight: 600;
   color: var(--color-accent);
   margin-bottom: var(--space-md);
@@ -194,6 +206,7 @@
   overflow: hidden;
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-card);
+  transform: rotate(2deg);
 }
 
 .hero__image-wrapper::before {
@@ -224,6 +237,7 @@
 .about__text p {
   color: var(--color-text-secondary);
   font-size: var(--text-lg);
+  line-height: 1.9;
 }
 
 .about__block {
@@ -279,7 +293,7 @@
 }
 
 .skill-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
   border-color: var(--color-accent);
 }
 
@@ -393,24 +407,42 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-xl);
+  counter-reset: project;
 }
 
 .project-card {
+  position: relative;
+  overflow: hidden;
+  counter-increment: project;
   padding: var(--space-2xl);
+  padding-right: 8rem;
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.project-card::before {
+  content: "0" counter(project);
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(20, 224, 180, 0.08);
 }
 
 .project-card:hover {
   border-color: rgba(20, 224, 180, 0.3);
   box-shadow: var(--shadow-glow);
+  transform: translateY(-3px);
 }
 
 .project-card__title {
   font-family: var(--font-heading);
-  font-size: var(--text-2xl);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 600;
   margin-bottom: var(--space-md);
 }
@@ -419,6 +451,7 @@
   color: var(--color-text-secondary);
   margin-bottom: var(--space-lg);
   line-height: 1.8;
+  max-width: 52rem;
 }
 
 .project-card__stack {
@@ -642,6 +675,16 @@
 
   .timeline__item::before {
     left: calc(-1 * var(--space-lg) - 5px);
+  }
+
+  .project-card {
+    padding: var(--space-xl);
+  }
+
+  .project-card::before {
+    top: 1rem;
+    right: 1rem;
+    font-size: 2.75rem;
   }
 }
 

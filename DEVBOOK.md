@@ -222,6 +222,7 @@ Puis ouvrir `http://localhost:8080` (ou le port affiché).
 - Ajout des projets **Listener**, **Blobby** et **Morpion**, avec leur stack et leur dépôt GitHub.
 - Le projet de gestion de stock est signalé **En cours** et présenté comme réalisé dans le cadre du stage.
 - La description de Morpion précise son objectif d'apprentissage de la programmation orientée objet.
+- La section À propos souligne la curiosité du profil et son ouverture à l'apprentissage de nouvelles technologies selon les besoins du poste.
 
 ### Refonte visuelle
 

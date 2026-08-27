@@ -129,6 +129,13 @@ export const projects = [
     stack: ["React", "TypeScript", "Vite", "Canvas", "NestJS", "Socket.IO"],
     githubUrl: "https://github.com/Eraste21/projet-blobby",
   },
+  {
+    title: "Morpion",
+    description:
+      "Projet réalisé pour travailler la programmation orientée objet (POO) en Python. Ce jeu de morpion pour deux joueurs avec une interface graphique gère les tours, détecte les victoires et les matchs nuls, puis conserve le score entre les parties.",
+    stack: ["Python", "Tkinter", "POO"],
+    githubUrl: "https://github.com/Eraste21/morpion",
+  },
 ];
 
 /**
@@ -147,6 +154,7 @@ export const stackIcons = {
   Chrome: "devicon-chrome-plain colored",
   Vite: "devicon-vitejs-plain colored",
   "Socket.IO": "devicon-socketio-original",
+  Python: "devicon-python-plain colored",
 };
 
 /** Coordonnées de contact */

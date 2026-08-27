@@ -107,13 +107,29 @@ export const experience = [
   },
 ];
 
-/** Projet en cours */
-export const project = {
-  title: "Outil fullstack de gestion de stock",
-  description:
-    "Application web actuellement conçue pour centraliser la gestion des produits, lots, fournisseurs, stocks, commandes, fiches analytiques et alertes. Approche évolutive, intégrant progressivement les retours des réunions avec l'entreprise.",
-  stack: ["React", "TypeScript", "NestJS", "MySQL", "Docker", "Render"],
-};
+/** Projets présentés dans le portfolio */
+export const projects = [
+  {
+    title: "Outil fullstack de gestion de stock — En cours",
+    description:
+      "Projet réalisé dans le cadre de mon stage : une application web conçue pour centraliser la gestion des produits, lots, fournisseurs, stocks, commandes, fiches analytiques et alertes. Son développement évolue progressivement selon les retours de l'entreprise.",
+    stack: ["React", "TypeScript", "NestJS", "MySQL", "Docker", "Render"],
+  },
+  {
+    title: "Listener",
+    description:
+      "Extension Chrome qui lit à voix haute le texte sélectionné sur une page web. Le projet vise une utilisation simple et prévoit à terme le choix de la voix ainsi que la prise en charge d'autres navigateurs.",
+    stack: ["HTML", "CSS", "JavaScript", "Chrome"],
+    githubUrl: "https://github.com/Eraste21/Listener",
+  },
+  {
+    title: "Blobby",
+    description:
+      "Jeu multijoueur en temps réel jouable dans le navigateur. Deux joueurs s'affrontent dans une arène en incarnant un Chasseur ou un Fuyard, avec des pouvoirs, des obstacles et une interface adaptée aux ordinateurs comme aux mobiles.",
+    stack: ["React", "TypeScript", "Vite", "Canvas", "NestJS", "Socket.IO"],
+    githubUrl: "https://github.com/Eraste21/projet-blobby",
+  },
+];
 
 /**
  * Correspondance nom de techno → classe Devicon pour le rendu du projet.
@@ -125,6 +141,12 @@ export const stackIcons = {
   NestJS: "devicon-nestjs-plain colored",
   MySQL: "devicon-mysql-plain colored",
   Docker: "devicon-docker-plain colored",
+  HTML: "devicon-html5-plain colored",
+  CSS: "devicon-css3-plain colored",
+  JavaScript: "devicon-javascript-plain colored",
+  Chrome: "devicon-chrome-plain colored",
+  Vite: "devicon-vitejs-plain colored",
+  "Socket.IO": "devicon-socketio-original",
 };
 
 /** Coordonnées de contact */

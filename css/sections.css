@@ -388,13 +388,18 @@
 
 /* ===================== PROJET ===================== */
 
-.project-card {
+#project-card {
   margin-top: var(--space-xl);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+.project-card {
   padding: var(--space-2xl);
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  max-width: 800px;
   transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
@@ -443,6 +448,20 @@
 
 .project-card__stack-item i {
   font-size: 1.25rem;
+}
+
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+.project-card__link:hover {
+  text-decoration: underline;
 }
 
 /* Badge Render (pas disponible sur Devicon) */

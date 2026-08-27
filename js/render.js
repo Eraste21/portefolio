@@ -12,7 +12,7 @@ import {
   interests,
   education,
   experience,
-  project,
+  projects,
   stackIcons,
   contact,
 } from "./data.js";
@@ -199,21 +199,31 @@ function renderStackBadge(tech) {
 }
 
 /**
- * Affiche la carte du projet en cours avec sa stack technique.
+ * Affiche les cartes des projets avec leur stack technique.
  */
 export function renderProject() {
   const container = document.getElementById("project-card");
   if (!container) return;
 
-  const stackHtml = project.stack.map(renderStackBadge).join("");
+  container.innerHTML = projects
+    .map((project, index) => {
+      const stackHtml = project.stack.map(renderStackBadge).join("");
+      const githubLink = project.githubUrl
+        ? `<a class="project-card__link" href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">
+            Voir sur GitHub <span aria-hidden="true">→</span>
+          </a>`
+        : "";
 
-  container.innerHTML = `
-    <article class="project-card" data-aos="fade-up">
-      <h3 class="project-card__title">${project.title}</h3>
-      <p class="project-card__desc">${project.description}</p>
-      <div class="project-card__stack">${stackHtml}</div>
-    </article>
-  `;
+      return `
+        <article class="project-card" data-aos="fade-up" data-aos-delay="${index * 100}">
+          <h3 class="project-card__title">${project.title}</h3>
+          <p class="project-card__desc">${project.description}</p>
+          <div class="project-card__stack">${stackHtml}</div>
+          ${githubLink}
+        </article>
+      `;
+    })
+    .join("");
 }
 
 /**

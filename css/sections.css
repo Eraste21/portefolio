@@ -301,6 +301,12 @@
   font-size: 2.5rem;
 }
 
+.skill-icon--image {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+}
+
 .skill-name {
   font-family: var(--font-mono);
   font-size: var(--text-xs);
@@ -481,6 +487,12 @@
 
 .project-card__stack-item i {
   font-size: 1.25rem;
+}
+
+.project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--space-xl);
 }
 
 .project-card__link {

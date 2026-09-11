@@ -53,9 +53,13 @@ export function renderAboutTags() {
  * @returns {string} HTML de la carte compétence
  */
 function renderSkillCard(skill, index) {
+  // Certaines technologies utilisent directement leur logo officiel en SVG.
+  const icon = skill.iconUrl
+    ? `<img class="skill-icon skill-icon--image" src="${skill.iconUrl}" alt="" loading="lazy">`
+    : `<i class="${skill.icon} skill-icon" aria-hidden="true"></i>`;
   return `
     <div class="skill-card" data-aos="zoom-in" data-aos-delay="${index * 30}">
-      <i class="${skill.icon} skill-icon" aria-hidden="true"></i>
+      ${icon}
       <span class="skill-name">${skill.name}</span>
     </div>
   `;
@@ -208,6 +212,12 @@ export function renderProject() {
   container.innerHTML = projects
     .map((project, index) => {
       const stackHtml = project.stack.map(renderStackBadge).join("");
+      // Le lien de démonstration est facultatif, comme celui du dépôt GitHub.
+      const siteLink = project.siteUrl
+        ? `<a class="project-card__link" href="${project.siteUrl}" target="_blank" rel="noopener noreferrer">
+            Voir le site <span aria-hidden="true">→</span>
+          </a>`
+        : "";
       const githubLink = project.githubUrl
         ? `<a class="project-card__link" href="${project.githubUrl}" target="_blank" rel="noopener noreferrer">
             Voir sur GitHub <span aria-hidden="true">→</span>
@@ -219,7 +229,7 @@ export function renderProject() {
           <h3 class="project-card__title">${project.title}</h3>
           <p class="project-card__desc">${project.description}</p>
           <div class="project-card__stack">${stackHtml}</div>
-          ${githubLink}
+          <div class="project-card__links">${siteLink}${githubLink}</div>
         </article>
       `;
     })

@@ -254,4 +254,15 @@ Puis ouvrir `http://localhost:8080` (ou le port affiché).
 
 ---
 
+## 12. Ajout de deux projets — 11 septembre 2026
+
+- `js/data.js` : ajout de Gestion de budget (site et dépôt GitHub) et de PRISMA — Profil des 4 couleurs (site).
+- Description et stack budget fondées sur le manifeste et les routes du projet local `gestion-budget-app/client` ; PRISMA documenté à partir du ZIP fourni.
+- `js/render.js` : prise en charge du lien facultatif « Voir le site », ouvert dans un nouvel onglet avec `noopener noreferrer`.
+- `css/sections.css` : regroupement des liens avec espacement et retour à la ligne sur les petits écrans.
+- Vérifications : syntaxe des deux fichiers JavaScript, `git diff --check` et exécution du rendu avec conteneur simulé (six cartes et trois nouveaux liens) réussies.
+- Limites : rendu visuel non vérifié dans un navigateur ; les sites Netlify et le contenu du dépôt budget n'ont pas pu être consultés depuis cet environnement. Le profil GitHub confirme le dépôt public `budget-app`.
+
+---
+
 *Généré le 19 août 2026 — Portfolio Eraste Konan*

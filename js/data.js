@@ -18,6 +18,7 @@ export const skills = [
 
   /* Back-end & données */
   { name: "NestJS", category: "backend", icon: "devicon-nestjs-plain colored" },
+  { name: "ExpressJS", category: "backend", iconUrl: "https://expressjs.com/images/logos/logo-white.svg" },
   { name: "MySQL", category: "backend", icon: "devicon-mysql-plain colored" },
   { name: "Python", category: "backend", icon: "devicon-python-plain colored" },
   { name: "PostgreSQL", category: "backend", icon: "devicon-postgresql-plain colored" },
@@ -66,8 +67,14 @@ export const interests = [
 export const education = [
   {
     school: "ESGI Lille",
+    degree: "4ᵉ année",
+    period: "2026 – aujourd'hui",
+    location: "Lille, France",
+  },
+  {
+    school: "ESGI Lille",
     degree: "3ᵉ année",
-    period: "2025 – aujourd'hui",
+    period: "2025 – 2026",
     location: "Lille, France",
   },
   {
@@ -110,6 +117,21 @@ export const experience = [
 /** Projets présentés dans le portfolio */
 export const projects = [
   {
+    title: "Gestion de budget",
+    description:
+      "Application web de gestion de budget personnel pour suivre ses revenus et ses dépenses, organiser ses transactions par catégorie et consulter un tableau de bord de ses finances.",
+    stack: ["React", "TypeScript", "Vite", "Tailwind CSS", "PostgreSQL", "Supabase"],
+    githubUrl: "https://github.com/Eraste21/budget-app",
+    siteUrl: "https://budget-app-manager.netlify.app/",
+  },
+  {
+    title: "PRISMA — Profil des 4 couleurs",
+    description:
+      "Questionnaire de personnalité en 20 ou 32 questions pour explorer quatre tendances comportementales et visualiser son profil à travers des graphiques. Les questions peuvent être générées par IA via une fonction Netlify, avec un générateur local en complément. Un outil de réflexion personnelle.",
+    stack: ["HTML", "CSS", "JavaScript", "Netlify Functions"],
+    siteUrl: "https://4-colors-personnality.netlify.app/",
+  },
+  {
     title: "Outil fullstack de gestion de stock — En cours",
     description:
       "Projet réalisé dans le cadre de mon stage : une application web conçue pour centraliser la gestion des produits, lots, fournisseurs, stocks, commandes, fiches analytiques et alertes. Son développement évolue progressivement selon les retours de l'entreprise.",
@@ -147,6 +169,9 @@ export const stackIcons = {
   TypeScript: "devicon-typescript-plain colored",
   NestJS: "devicon-nestjs-plain colored",
   MySQL: "devicon-mysql-plain colored",
+  PostgreSQL: "devicon-postgresql-plain colored",
+  Supabase: "devicon-supabase-plain colored",
+  "Tailwind CSS": "devicon-tailwindcss-plain colored",
   Docker: "devicon-docker-plain colored",
   HTML: "devicon-html5-plain colored",
   CSS: "devicon-css3-plain colored",

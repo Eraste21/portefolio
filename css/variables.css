@@ -6,6 +6,9 @@
  */
 
 :root {
+  color-scheme: dark;
+  --color-header: rgba(10, 10, 11, 0.92);
+  --color-menu: rgba(10, 10, 11, 0.98);
   /* --- Palette noir / blanc / teal --- */
   --color-bg: #0A0A0B;
   --color-bg-secondary: #141517;
@@ -53,4 +56,19 @@
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
+}
+
+/* Turquoise plus foncé pour garder les textes lisibles sur fond clair. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #FAFCFC;
+  --color-bg-secondary: #EDF3F2;
+  --color-text: #172320;
+  --color-text-secondary: #52635F;
+  --color-accent: #087D65;
+  --color-accent-hover: #06634F;
+  --color-border: #CFDDDA;
+  --color-header: rgba(250, 252, 252, 0.92);
+  --color-menu: rgba(250, 252, 252, 0.98);
+  --shadow-card: 0 4px 24px rgba(23, 35, 32, 0.1);
 }

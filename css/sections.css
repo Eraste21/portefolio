@@ -11,7 +11,7 @@
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background: rgba(10, 10, 11, 0.92);
+  background: var(--color-header);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--color-border);
   z-index: 1000;
@@ -24,6 +24,7 @@
 }
 
 .nav {
+  gap: var(--space-md);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,6 +52,7 @@
 }
 
 .nav__menu {
+  margin-left: auto;
   display: flex;
   align-items: center;
   gap: var(--space-lg);
@@ -78,6 +80,36 @@
 .nav__link--cta:hover {
   background: var(--color-accent);
   color: var(--color-bg);
+}
+
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  white-space: nowrap;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-secondary);
+  color: var(--color-text);
+  font: 500 var(--text-xl) var(--font-body);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-accent);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Le logo ExpressJS fourni est blanc : on l'assombrit sur fond clair. */
+:root[data-theme="light"] .skill-icon--image {
+  filter: brightness(0.15);
 }
 
 /* Menu burger — visible uniquement sur mobile */
@@ -637,7 +669,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   :root {
     --space-section: 4rem;
     --text-5xl: 2.5rem;
@@ -646,6 +678,11 @@
 
   .nav__burger {
     display: flex;
+    order: 3;
+  }
+
+  .theme-toggle {
+    margin-left: auto;
   }
 
   .nav__menu {
@@ -654,7 +691,7 @@
     left: 0;
     width: 100%;
     flex-direction: column;
-    background: rgba(10, 10, 11, 0.98);
+    background: var(--color-menu);
     border-bottom: 1px solid var(--color-border);
     padding: var(--space-lg);
     gap: var(--space-md);

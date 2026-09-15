@@ -274,6 +274,15 @@ export function renderContact() {
         </p>
       </div>
     </div>
+    <div class="contact__card" data-aos="fade-up" data-aos-delay="320">
+      <div class="contact__icon"><i class="devicon-linkedin-plain" aria-hidden="true"></i></div>
+      <div>
+        <p class="contact__label">LinkedIn</p>
+        <p class="contact__value">
+          <a href="${contact.linkedinUrl}" target="_blank" rel="noopener noreferrer">Eraste Konan</a>
+        </p>
+      </div>
+    </div>
   `;
 }
 

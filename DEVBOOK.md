@@ -265,4 +265,24 @@ Puis ouvrir `http://localhost:8080` (ou le port affiché).
 
 ---
 
+## 13. Mode clair / sombre et LinkedIn — 15 septembre 2026
+
+- Bouton dans la topbar, visible également lorsque le menu mobile est fermé. Navigation repliée à 960 px pour laisser la place au bouton.
+- `js/theme.js` : thème sombre par défaut, choix mémorisé dans localStorage et appliqué avant l'affichage ; fonctionnement conservé si le stockage est bloqué.
+- `css/variables.css` et `css/sections.css` : palette claire avec turquoise contrasté, fonds de navigation adaptés et logo ExpressJS assombri en mode clair.
+- `index.html`, `js/data.js`, `js/render.js` : profil LinkedIn ajouté à l'accueil et aux contacts, avec ouverture dans un nouvel onglet.
+- Vérifications réussies : syntaxe des trois scripts modifiés ou ajoutés, `git diff --check`, exécution avec DOM simulé (bascule dans les deux sens, préférences sauvegardées, valeur invalide, stockage bloqué), rendu des cinq contacts et lien LinkedIn.
+- Limite : affichage et interaction réelle au clavier sur ordinateur/mobile non vérifiés ; aucun outil navigateur disponible et Playwright absent.
+
+---
+
+## 14. Actualisation du README — 15 septembre 2026
+
+- Remplacement du brief initial par la documentation du site existant : lancement local, arborescence, modification du contenu, six projets, thèmes et liens de contact.
+- Documentation du format final du bouton de thème : carré de 36 × 36 px avec icône soleil/lune.
+- Vérifications : contenu comparé aux fichiers actuels, syntaxe des quatre scripts JavaScript et `git diff --check` réussis ; Python 3.9.13 disponible.
+- Aucun contrôle visuel ni lancement du serveur réalisé pour cette mise à jour documentaire.
+
+---
+
 *Généré le 19 août 2026 — Portfolio Eraste Konan*

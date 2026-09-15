@@ -189,4 +189,5 @@ export const contact = {
   location: "Villeneuve-d'Ascq, France",
   github: "github.com/Eraste21",
   githubUrl: "https://github.com/Eraste21",
+  linkedinUrl: "https://www.linkedin.com/in/eraste-konan/",
 };

@@ -150,6 +150,7 @@ export const projects = [
       "Jeu multijoueur en temps réel jouable dans le navigateur. Deux joueurs s'affrontent dans une arène en incarnant un Chasseur ou un Fuyard, avec des pouvoirs, des obstacles et une interface adaptée aux ordinateurs comme aux mobiles.",
     stack: ["React", "TypeScript", "Vite", "Canvas", "NestJS", "Socket.IO"],
     githubUrl: "https://github.com/Eraste21/projet-blobby",
+    siteUrl: "https://projet-blobby.vercel.app/",
   },
   {
     title: "Morpion",

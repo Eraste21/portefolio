@@ -12,6 +12,8 @@ Portfolio personnel d'Eraste Konan, développeur web fullstack en formation à l
 - Cartes de projets avec liens facultatifs vers une démonstration et un dépôt GitHub.
 - Animations au défilement et mise en évidence de la section active dans la navigation.
 - Liens GitHub et LinkedIn dans l'accueil et les contacts.
+- Bouton « Télécharger mon CV » dans l'accueil, proposant le fichier `assets/CV.pdf` sous le nom `CV-Eraste-Konan.pdf`.
+- Recherche d'une alternance, d'un stage ou d'un CDD, avec une disponibilité dès que possible, indiquée dans la section Contact.
 
 ## Technologies
 
@@ -51,7 +53,9 @@ Utiliser un serveur HTTP local : l'ouverture directe de `index.html` avec une UR
 portefolio/
 ├── index.html          # Structure de la page, accueil et texte de présentation
 ├── assets/
-│   └── profile.png     # Image de profil, logo de navigation et favicon
+│   ├── CV.pdf          # CV proposé au téléchargement
+│   ├── profile.png     # Logo de navigation et favicon
+│   └── profile 2.png   # Image de présentation dans l'accueil
 ├── css/
 │   ├── variables.css  # Couleurs des deux thèmes, polices et espacements
 │   ├── base.css       # Styles globaux, boutons et tags
@@ -69,6 +73,8 @@ portefolio/
 ## Modifier le portfolio
 
 - **Accueil et présentation** : modifier `index.html`.
+- **CV** : remplacer `assets/CV.pdf` pour actualiser le document téléchargé. Le bouton et le nom de téléchargement sont définis dans `index.html`.
+- **Disponibilité et contrats recherchés** : modifier le texte de la section Contact dans `index.html`.
 - **Compétences, savoir-être, langues, intérêts, expériences, formations et projets** : modifier les tableaux de `js/data.js`.
 - **Contacts** : modifier l'objet `contact` dans `js/data.js`. Les liens GitHub et LinkedIn de l'accueil sont aussi présents dans `index.html`.
 - **Ajouter un projet** : ajouter un objet au tableau `projects` avec `title`, `description` et `stack`. Les champs `githubUrl` et `siteUrl` sont facultatifs ; leurs liens sont affichés par `js/render.js` lorsqu'ils sont renseignés.
@@ -109,6 +115,7 @@ Pour vérifier le comportement dans le navigateur :
 2. Ouvrir le menu burger et sélectionner une section.
 3. Basculer entre les deux thèmes, puis recharger la page pour vérifier la mémorisation.
 4. Vérifier les boutons au clavier, les icônes et la lisibilité dans les deux thèmes.
+5. Cliquer sur « Télécharger mon CV » et vérifier que le PDF téléchargé s'ouvre correctement.
 
 La validation de syntaxe ne remplace pas ces contrôles visuels et interactifs. Les vérifications effectuées et leurs limites sont consignées dans [DEVBOOK.md](DEVBOOK.md).
 
@@ -117,6 +124,8 @@ La validation de syntaxe ne remplace pas ces contrôles visuels et interactifs. 
 Le dossier peut être servi par un hébergeur de fichiers statiques. Publier `index.html` avec les dossiers `assets/`, `css/` et `js/` à leur emplacement relatif actuel. Aucune compilation ni service backend n'est nécessaire pour le portfolio.
 
 ## Contact
+
+À la recherche d'une **alternance**, d'un **stage** ou d'un **CDD** — disponible **dès que possible**.
 
 - [LinkedIn — Eraste Konan](https://www.linkedin.com/in/eraste-konan/)
 - [GitHub — Eraste21](https://github.com/Eraste21)
